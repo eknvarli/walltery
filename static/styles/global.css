@@ -1,0 +1,21 @@
+.navbar.main {
+    background-color: #1B2631 !important;
+}
+
+.btn-primary {
+    background-color: #2471A3 !important;
+    border-color: #2471A3 !important;
+    color: #fafafa !important;
+}
+
+.btn-secondary {
+    background-color: #34495E !important;
+    border-color: #34495E !important;
+    color: #fafafa !important;
+}
+
+.btn-danger {
+    background-color: #CB4335 !important;
+    border-color: #CB4335 !important;
+    color: #fafafa !important;
+}

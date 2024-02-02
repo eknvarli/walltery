@@ -1,0 +1,40 @@
+{% extends 'base.jinja' %}
+{% block title %}Index{% endblock %}
+
+{% block content %}
+    <div class="container"><br>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Walltery</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Index</li>
+          </ol>
+        </nav>
+        <nav class="navbar navbar-light justify-content-between">
+          <h1>Password List</h1>
+          <a class="btn btn-secondary" href="/add/"><i class="bi bi-plus"></i> Add</a>
+        </nav>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Title</th>
+              <th scope="col">Password</th>
+              <th scope="col">Description</th>
+              <th scope="col">Delete/Update</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for password in passwords %}
+            <tr>
+              <th scope="row">{{password.id}}</th>
+              <td>{{password.title}}</td>
+              <td>{{password.password}}</td>
+              <td>{{password.description}}</td>
+              <td><a class="btn btn-danger" href="/delete/{{password.slug}}/">Delete</a> <a class="btn btn-primary" href="/edit/{{password.slug}}/">Edit</a></td>
+            </tr>
+           {% endfor %}
+          </tbody>
+        </table>
+    </div>
+{% endblock %}

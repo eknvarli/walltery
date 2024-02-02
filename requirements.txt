@@ -1,0 +1,4 @@
+django
+django-autoslug
+django-crispy-forms
+crispy-bootstrap4

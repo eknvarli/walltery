@@ -1,0 +1,24 @@
+{% extends 'base.jinja' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Add Password{% endblock %}
+
+{% block content %}
+    <div class="container"><br>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Walltery</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Add Password</li>
+          </ol>
+        </nav>
+
+        <form enctype="multipart/form-data" method="POST">
+            {% csrf_token %}
+            {{form.media}}
+            {{form|crispy}}
+            <li>Recommended Password: {{recommended}}</li>
+            <br>
+            <button type="submit" class="btn btn-primary"><i class="bi bi-plus"></i> Add</button>
+        </form>
+    </div>
+{% endblock %}
